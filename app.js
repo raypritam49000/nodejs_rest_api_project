@@ -20,6 +20,7 @@ app.use(cors({ origin: "*" }));
 app.use(logger('dev'))
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use('/public/css', express.static('public/css'));
 
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
